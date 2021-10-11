@@ -5,3 +5,5 @@ This is my first git program!
 This is the change in the system configuration.
 
 Changing the VM OS to Ubuntu.
+
+Adding new features.
