@@ -17,18 +17,28 @@ pipeline	{
 			}
 		}
 		stage('Build')	{
-			steps	{
-				sh	'exit 1'
+			agent {
+				node {
+					label "DockerServer";
+				}
+			}
+			steps {
+				sh 'docker build
+				https://github.com/kishorekumar2127/devops_practice.git -t
+				devops_practice:latest'
 			}
 		}
-		stage('Delivery')	{
-			steps	{
-				sh	'exit 1'
-			}
-		}
+	
 		stage('Deploy')	{
-			steps	{
-				sh	'exit 1'
+			agent	{
+				node{
+					label "DockerServer";
+				}
+			}
+		
+		
+			steps {
+				sh 'docker	run	-tdi	-p	5000:5000	kishorekumar2127:latest'
 			}
 		}
 	}
