@@ -23,9 +23,9 @@ pipeline	{
 				}
 			}
 			steps {
-				sh 'docker build
+				sh '''docker build
 				https://github.com/kishorekumar2127/devops_practice.git -t
-				devops_practice:latest'
+				devops_practice:latest'''
 			}
 		}
 	
