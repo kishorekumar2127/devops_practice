@@ -23,7 +23,7 @@ pipeline	{
 				}
 			}
 			steps {
-				sh 'docker build https://github.com/kishorekumar2127/devops_practice.git -t DevOps:latest'
+				sh 'docker build https://github.com/kishorekumar2127/devops_practice.git -t devops_practice:latest'
 			}
 		}
 	
@@ -36,7 +36,7 @@ pipeline	{
 		
 		
 			steps {
-				sh 'docker	run	-tdi	-p	5000:5000	DevOps:latest'
+				sh 'docker	run	-tdi	-p	5000:5000	devops_practice:latest'
 			}
 		}
 	}
