@@ -23,7 +23,7 @@ pipeline	{
 				}
 			}
 			steps {
-				sh 'docker build https://github.com/kishorekumar2127/devops_practice.git -t devops_practice:latest'
+				sh 'docker build -f https://github.com/kishorekumar2127/devops_practice.git devops_practice:latest'
 			}
 		}
 	
